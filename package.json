@@ -1,0 +1,27 @@
+{
+  "name": "nodestart",
+  "version": "1.0.0",
+  "description": "starting node",
+  "main": "firstServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashSrivstav/NODE_.js.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "react"
+  ],
+  "author": "YASH SRIVASTAVA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashSrivstav/NODE_.js/issues"
+  },
+  "homepage": "https://github.com/yashSrivstav/NODE_.js#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
