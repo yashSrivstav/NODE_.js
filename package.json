@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/yashSrivstav/NODE_.js#readme",
   "dependencies": {
+    "nodemailer": "^6.6.0",
     "nodemon": "^2.0.7"
   }
 }
