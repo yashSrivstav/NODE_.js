@@ -1,6 +1,13 @@
 const express = require('express')
 const app = express();
 
+const checkUrl = (req, res, next) => {
+    console.log("current route is", req.originalUrl)
+    next();
+}
+
+app.use(checkUrl)
+
 app.get('/', (req, res) => {
     res.send("This is HomePage")
 })
@@ -9,13 +16,13 @@ app.get('/about', (req, res) => {
     res.send("This is about page")
 })
 
-app.post('/login', (req, res) => {
+app.get('/login', (req, res) => {
     res.send("This is login page")
 })
-app.put('/login', (req, res) => {
+app.get('/login', (req, res) => {
     res.send("This is login page")
 })
-app.delete('/login', (req, res) => {
+app.get('/login', (req, res) => {
     res.send("This is login page")
 })
 
