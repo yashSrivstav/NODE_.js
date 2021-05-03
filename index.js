@@ -1,5 +1,8 @@
 const express = require('express')
 const app = express()
+var bodyParser = require('body-parser')
+
+var encoder = bodyParser.urlencoded();
 
 app.use('/assets', express.static('assets'))
 
@@ -11,8 +14,14 @@ app.get("/profile/:name", (req, res) => {
 })
 
 app.get("/login", (req, res) => {
+    console.log(req.query)
     res.render("login")
 })
+app.post("/login", encoder, (req, res) => {
+    console.log(req.body)
+    res.render("home")
+})
+
 app.get("/", (req, res) => {
     res.render("home")
 })
