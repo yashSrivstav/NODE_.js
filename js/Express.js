@@ -1,10 +1,7 @@
 const express = require('express')
 const app = express();
+const checkUrl = require('./middleware')
 const router = express.Router()
-const checkUrl = (req, res, next) => {
-    console.log("current route is", req.originalUrl)
-    next();
-}
 
 // app.use(checkUrl) global
 
@@ -19,7 +16,7 @@ app.get('/about', (req, res) => {
 router.get('/login', checkUrl, (req, res) => {
     res.send("This is login page")
 })
-app.get('/home', (req, res) => {
+router.get('/home', checkUrl, (req, res) => {
     res.send("This is login page")
 })
 app.get('/yes', (req, res) => {
