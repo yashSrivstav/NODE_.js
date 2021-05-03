@@ -11,6 +11,17 @@
 <body>
     <h1>Welcome! Mr <%= name%>
     </h1>
+    <h3>Email <%= data.email%>
+    </h3>
+    <h2>Address: <%= data.address%>
+    </h2>
+    <ul>
+        <% data.skills.forEach((item)=>{ %>
+            <li>
+                <%= item%>
+            </li>
+            <% }) %>
+    </ul>
 </body>
 
 </html>
