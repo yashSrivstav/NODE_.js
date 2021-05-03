@@ -7,4 +7,10 @@ app.get("/profile/:name", (req, res) => {
     res.render('profile', { name: req.params.name, data: data })
 })
 
+app.get("/login", (req, res) => {
+    res.render("login")
+})
+app.get("/", (req, res) => {
+    res.render("home")
+})
 app.listen(3000)

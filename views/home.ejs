@@ -5,26 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
+
 <body>
-    <%- include('common/nav.ejs')-%>
-        <h1>Welcome! Mr <%= name%>
-        </h1>
-        <h3>Email <%= data.email%>
-        </h3>
-        <h2>Address: <%= data.address%>
-        </h2>
-        <ul>
-            <% data.skills.forEach((item)=>{ %>
-                <li>
-                    <%= item%>
-                </li>
-                <% }) %>
-        </ul>
+    <%- include('common/nav') -%>
+        <h1>Home Page</h1>
 </body>
 
 </html>
