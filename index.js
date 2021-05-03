@@ -1,5 +1,8 @@
 const express = require('express')
 const app = express()
+
+app.use('/assets', express.static('assets'))
+
 app.set('view engine', 'ejs')
 app.get("/profile/:name", (req, res) => {
     // console.log(req.params.name)
