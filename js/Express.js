@@ -12,5 +12,11 @@ app.get('/about', (req, res) => {
 app.post('/login', (req, res) => {
     res.send("This is login page")
 })
+app.put('/login', (req, res) => {
+    res.send("This is login page")
+})
+app.delete('/login', (req, res) => {
+    res.send("This is login page")
+})
 
 app.listen(3000)
