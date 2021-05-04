@@ -14,3 +14,13 @@ hosteler.find({}, (err, data) => {
     if (err) console.log(err)
     console.log(data)
 })
+
+const data = new hosteler({
+    _id: new mongoose.Types.ObjectId,
+    name: "Riya Goel",
+    email: "riya@gmail.com",
+    address: "turra"
+})
+data.save().then((result) => {
+    console.log("inserted")
+}).catch((err) => { console.log(error) })
