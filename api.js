@@ -11,7 +11,7 @@ mongoose.connect('mongodb://hostel:d9Jdw53nXIXDo972@cluster0-shard-00-00.t6tjn.m
     })
 
 app.get('/', (req, res) => {
-    hosteler.find({ name: "yash" }).then((data) => {
+    hosteler.find({}, { _id: 0 }).then((data) => {
         res.json(data)
     })
 })
